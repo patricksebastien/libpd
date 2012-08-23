@@ -70,6 +70,21 @@ void libpd_init(void) {
   sys_searchpath = NULL;
 }
 
+/*
+EXTERNAL _setup
+*/
+void libpd_expr_tilde_setup(void) {
+	expr_tilde_setup();
+}
+void libpd_bytes2any_setup(void) {
+	bytes2any_setup_guts();
+}
+void libpd_comport_setup(void) {
+	comport_setup();
+}
+
+
+
 void libpd_clear_search_path(void) {
   namelist_free(sys_searchpath);
   sys_searchpath = NULL;

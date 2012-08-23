@@ -19,9 +19,16 @@ extern "C"
 #include "m_pd.h"
 
 EXTERN void libpd_init(void);
+
+/*
+EXTERNAL _SETUP()
+*/
+EXTERN void libpd_expr_tilde_setup(void);
+EXTERN void libpd_bytes2any_setup_guts(void);
+EXTERN void libpd_comport_setup(void);
+
 EXTERN void libpd_clear_search_path(void);
 EXTERN void libpd_add_to_search_path(const char *sym);
-
 EXTERN void *libpd_openfile(const char *basename, const char *dirname);
 EXTERN void libpd_closefile(void *p);
 EXTERN int libpd_getdollarzero(void *p);
