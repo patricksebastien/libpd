@@ -93,6 +93,8 @@ JAVA_BASE = java/org/puredata/core/PdBase.java
 HOOK_SET = libpd_wrapper/z_csharp_helper.c
 LIBPD = libs/libpd.$(SOLIB_EXT)
 PDCSHARP = libs/libpdcsharp.$(SOLIB_EXT)
+HOOK_UNITY = libpd_wrapper/z_unity_helper.c
+PDUNITY = libs/libpdunity.$(SOLIB_EXT)
 
 PDJAVA_BUILD = java-build
 PDJAVA_DIR = $(PDJAVA_BUILD)/org/puredata/core/natives/$(PDNATIVE_PLATFORM)/$(PDNATIVE_ARCH)/
@@ -128,6 +130,11 @@ csharplib: $(PDCSHARP)
 
 $(PDCSHARP): ${PD_FILES:.c=.o} ${HOOK_SET:.c=.o}
 	gcc -o $(PDCSHARP) $^ $(CSHARP_LDFLAGS) -lm -lpthread
+
+unitylib: $(PDUNITY)
+
+$(PDUNITY): ${PD_FILES:.c=.o} ${HOOK_SET:.c=.o} {HOOK_UNITY:.c=.o}
+	gcc -o $(PDUNITY) $^ $(CSHARP_LDFLAGS) -lm -lpthread
 
 clean:
 	rm -f ${PD_FILES:.c=.o} ${JNI_FILE:.c=.o} ${HOOK_SET:.c=.o}
