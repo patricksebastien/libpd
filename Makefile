@@ -133,8 +133,8 @@ $(PDCSHARP): ${PD_FILES:.c=.o} ${HOOK_SET:.c=.o}
 
 unitylib: $(PDUNITY)
 
-$(PDUNITY): ${PD_FILES:.c=.o} ${HOOK_SET:.c=.o} {HOOK_UNITY:.c=.o}
-	gcc -o $(PDUNITY) $^ $(CSHARP_LDFLAGS) -lm -lpthread
+$(PDUNITY): ${PD_FILES:.c=.o} ${HOOK_SET:.c=.o} ${HOOK_UNITY:.c=.o}
+	gcc -o $(PDCSHARP) $^ $(CSHARP_LDFLAGS) -lm -lpthread
 
 clean:
 	rm -f ${PD_FILES:.c=.o} ${JNI_FILE:.c=.o} ${HOOK_SET:.c=.o}
