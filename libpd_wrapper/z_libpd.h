@@ -23,6 +23,7 @@ EXTERN void libpd_init(void);
 /*
 EXTERNAL _SETUP()
 */
+EXTERN void libpd_fiddle_tilde_setup(void);
 EXTERN void libpd_expr_tilde_setup(void);
 EXTERN void libpd_bytes2any_setup_guts(void);
 EXTERN void libpd_comport_setup(void);

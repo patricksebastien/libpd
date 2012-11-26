@@ -73,6 +73,9 @@ void libpd_init(void) {
 /*
 EXTERNAL _setup
 */
+void libpd_fiddle_tilde_setup(void) {
+	fiddle_tilde_setup();
+}
 void libpd_expr_tilde_setup(void) {
 	expr_tilde_setup();
 }

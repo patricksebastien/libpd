@@ -1,3 +1,15 @@
+------------------------------------------------------------------------------------
+this fork add some externals (statically linked):
+	pure-data/extra/fiddle~/fiddle~.c \
+	pure-data/extra/expr~/vexp.c \
+	pure-data/extra/expr~/vexp_fun.c \
+	pure-data/extra/expr~/vexp_if.c \
+	pure-data/externals/moocow/pdstring/pdstringUtils.c \
+	pure-data/externals/moocow/pdstring/bytes2any.c \
+	pure-data/externals/iem/comport/comport.c
+------------------------------------------------------------------------------------
+
+
 For documentation of libpd, see the wiki: https://github.com/libpd/libpd/wiki
 
 Layout of the libpd repository:

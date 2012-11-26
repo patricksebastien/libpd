@@ -70,6 +70,7 @@ PD_FILES = \
 	pure-data/src/x_qlist.c pure-data/src/x_time.c \
 	libpd_wrapper/s_libpdmidi.c libpd_wrapper/x_libpdreceive.c \
 	libpd_wrapper/z_libpd.c \
+	pure-data/extra/fiddle~/fiddle~.c \
 	pure-data/extra/expr~/vexp.c \
 	pure-data/extra/expr~/vexp_fun.c \
 	pure-data/extra/expr~/vexp_if.c \
